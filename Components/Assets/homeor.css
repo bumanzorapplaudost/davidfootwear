@@ -1,0 +1,134 @@
+body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			overflow: hidden;
+			font-family: 'Raleway', sans-serif;
+		}
+
+		.title {
+		    text-align: center;
+		    font-size: 84px;
+		    color: #636b6f;
+		}
+
+		.title small {
+			color: #26a69a;
+		}
+		.card {
+			float: left;
+			width: 173px;
+			height: 235px;
+			transform-style: preserve-3d;
+			perspective: 600px;
+			transition: 0;
+			cursor: pointer;
+		}
+
+		.card .front {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			/* background: #fafafa;  */
+			background-image: linear-gradient(to top left, #fafafa, #fff);
+			backface-visibility: hidden;
+			transform: rotateX(0deg);
+			transition: 0.5s;
+		}
+
+		.card:hover .front, .card:focus .front {
+			transform: rotateX(-180deg);
+		}
+
+		.card .back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #4db6ac;
+			backface-visibility: hidden;
+			transform: rotateX(180deg);
+			transition: 0.5s;
+		}
+
+		.front .details {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 100%;
+			text-align: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.front .details h1 {
+			font-size: 74px;
+			color: #00897b;
+			
+		}
+
+		.card .back:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background: rgba(255,255,255,0.1);
+		}
+
+		.card:hover .back, .card:focus .back {
+			transform: rotateX(0deg);
+		}
+
+		.card .back .details {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 100%;
+			text-align: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.card .back .details h2 {
+			font-size: 24px;
+			margin: 0;
+			padding: 0;
+			color: #fff;
+		}
+
+		.card .back .details h2 span {
+			font-size: 14px;
+			color: #555;
+		}
+
+		.social-icons {
+			padding: 10px 0;
+		}
+
+		.social-icons a {
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			text-align: center;
+			background: #262626;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 50%;
+			transition: 0.5s;
+		}
+
+		.social-icons a .fa {
+			line-height: 36px;
+		}
+
+		.social-icons a:hover, .social-icons a:focus {
+			background: #fff;
+			color: #000;
+		}
